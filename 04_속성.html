@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h3 onclick="onclickBehave(this)"
+            onmouseout="onmouseoutBehave(this)"># 속성 (Attribute)</h3>
+
+        <p style= "background-color: orangered; color: white;"
+            title="속성에 대한 설명입니다.">
+            - 모든 요소는 속성을 가질 수 있다 <br>
+            - 속성은 해당 요소의 여는 태그에 정의해야 한다 <br>
+            - 속성을 통해 해당 요소의 추가적인 정보를 묘사할 수 있다 <br>
+            - 대부분의 속성은 속성 이름과 속성 값이 짝을 이룬다 <br>
+        </p>
+
+        <!-- script 태그 내부의 영역은 자바스크립트의 영역이 된다 -->
+        <script>
+            // JavaScript : 웹 브라우저가 해석하는 프로그래밍 언어
+            //              웹 브라우저를 직접 컨트롤하는 기능이 많이 있다
+            function onmouseoutBehave(e) {
+                e.style.backgroundColor = "white";
+                e.style.color = "black";
+            }
+
+            function onclickBehave(e) {
+                e.style.backgroundColor = "blue";
+                e.style.color = "white";
+            }
+
+        </script>
+
+
+</body>
+</html>
