@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_CSS 적용</title>
+    <link rel="stylesheet" href="./sheet/css03.css">
+    <style>
+        dt {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        dt:nth-of-type(2) {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: olive;
+        }
+
+        dt:nth-of-type(3) {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: salmon;
+        }
+
+       dt:nth-child(5) { /* dd까지 포함한 순서!*/
+            color: seagreen;
+        }
+
+        
+        dd {
+            font-size: 1.0rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h3># 페이지에 스타일 시트를 적용하는 방법 3가지</h3>
+
+    <dl>
+        <dt style="color: navy;">inline CSS(줄 내부 CSS)</dt>
+        <dd>
+            - style attribute를 이용해 스타일을 적용하는 방식<br>
+            - CSS 적용 우선순위가 가장 높다
+        </dd>
+        <dt>internal CSS (페이지 내부 CSS)</dt>
+        <dd>
+            - style tag를 이용해 스타일을 적용하는 방식 <br>
+            - 더 나중에 나온 스타일시트가 우선 순위가 높다
+        </dd>
+        <dt>external CSS (페이지 외부 CSS)</dt>
+        <dd>
+            - 외부의 .css 파일을 불러와 페이지에 적용하는 방식 <br>
+            - 외부의 .css 파일을 부를 때 &lt;link&gt;를 이용한다. <br>
+            - 우선 순위는 internal CSS와 같다
+        </dd>
+    </dl>
+    
+</body>
+</html>

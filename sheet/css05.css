@@ -1,0 +1,84 @@
+html {
+    font-size: 25px;
+}
+
+
+li {
+    border: solid 3px black;
+    padding:  3px;
+    margin-bottom: 3px;
+}
+
+#list1 > li:first-child {
+    border-width: 15px;
+    border-style: solid;
+    border-color: red;
+}
+
+#list1 > li:nth-child(2) {
+    border-width: 10px;
+    border-style: dashed;
+    border-color: blue;
+}
+
+#list1 > li:nth-child(3) {
+    border-width: 10px;
+    border-style: dotted;
+    border-color: blueviolet;
+}
+#list1 > li:nth-child(4) {
+    border-width: 10px;
+    border-style: double;
+    border-color: brown;
+}
+#list1 > li:nth-child(5) {
+    border-width: 20px;
+    border-style: groove;
+    border-color: burlywood;
+}
+#list1 > li:nth-child(6) {
+    border-width: 10px;
+    border-style: ridge;
+    border-color: coral;
+}
+#list1 > li:nth-child(7) {
+    border-width: 10px;
+    border-style: inset;
+    border-color: darkcyan;
+}
+#list1 > li:nth-child(8) {
+    border-width: 10px;
+    border-style: outset;
+    border-color: darkolivegreen;
+}
+#list1 > li:nth-child(9) {
+    border-width: 10px;
+    border-style: none;
+    border-color: dodgerblue;
+}
+#list1 > li:nth-child(10) {
+    border-width: 10px;
+    border-style: hidden;
+    border-color: indigo;
+}
+
+#list2 > li:nth-child(1) {
+    border-width: 10px;
+    border-style: solid;
+    border-color: orange;
+}
+#list2 > li:nth-child(2) {
+    border-width: 10px 20px;
+    border-style: solid double;
+    border-color: orange dodgerblue;
+}
+#list2 > li:nth-child(3) {
+    border-width: 10px 15px 20px;
+    border-style: solid double dashed;
+    border-color: orange dodgerblue darkolivegreen;
+}
+#list2 > li:nth-child(4) {
+    border-width: 10px 15px 20px 25px;
+    border-style: solid double dashed dotted;
+    border-color: orange dodgerblue darkolivegreen lightcoral;
+}
