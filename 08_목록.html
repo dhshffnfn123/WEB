@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_목록</title>
+</head>
+<body>
+    <h3> # ul :  unordered list, 순서 없는 리스트</h3>
+<!-- table>tr>td*3을 하면 바로 만들어준다! (괄호 사용 가능)-->
+
+    <p>type - circle, disc, square, none</p>
+
+   <ul type="circle">
+       <li>아메리카노</li> <!-- li : list item -->
+       <li>카페라떼</li>
+       <li>카페모카</li>
+       <li>캬라멜 마끼야도</li>
+       <li>콜드브루</li>
+   </ul>
+
+   <h3># ol : ordered list, 순서 있는 리스트</h3>
+
+   <ul>
+       <li>type attr - 1, a, A, i, I</li>
+       <li>start attribute - 시작값을 설정할 수 있다</li>
+   </ul>
+
+
+   <ol type="A" start="25">
+       <li>아메리카노</li>
+       <li>카페라뗴</li>
+       <li>카페모카</li>
+       <li>캬라멜 마끼야도</li>
+       <li>콜드브루</li>
+   </ol>
+
+   <h3># dl : description list, 설명이 있는 리스트</h3>
+
+   <dl>
+       <dt>붕어빵</dt>
+       <dd>- 붕어처럼 생긴 빵</dd>
+       <dt>아메키라노</dt>
+       <dd>- 커피에 물탄 것</dd>
+   </dl>
+
+   <h1>List Example</h1>
+   
+   <ol type="I">
+       <li> List Item 1</li>
+       <ol type="a">     
+            <li>Nested item 1.1</li>
+            <li>Nested item 1.2</li>
+            </ol>
+
+       <li>List Item 2</li>
+        <ol type="1">     
+            <li>Nested item 2.1</li>
+            <li>Nested item 2.2</li>
+            <ul type="circle">
+                <li>Nested item 2.2.1</li>
+                <li>Nested item 2.2.2</li>
+                <ul type="square">
+                    <li>Nested item 2.2.2.1</li>
+                    <li>Nested item 2.2.2.2</li>
+                </ul>  
+                <li>Nested item 2.2.3</li>
+            </ul>
+            <li>Nested item 2.3</li>
+            </ol>
+       <li>List Item 3</li>
+            <ul type="disc">
+                <li>Nested item 3.1</li>
+                <li>Nested item 3.1</li>
+                <li>Nested item 3.1</li>
+            </ul>
+   </ol>
+   
+   <dl>
+       <dt>COMP 249</dt>
+       <dd>Object-Oriented Programming II.</dd>
+       <dt>Soen287</dt>
+       <dd>Web Programming.</dd>
+   </dl>
+
+   <!-- li안에 데이터를 리스트를 넣을땐 li안에 넣도록 하자-->
+</body>
+</html>
