@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_텍스트.html</title>
+    <link rel="stylesheet" href="../sheet/css08.css">
+</head>
+<body>
+
+    <h3># 텍스트 옵션들</h3>
+
+    <ul>
+        <li>
+            <h5>text-align : 텍스트 정렬</h5>
+            <ul>
+                <li style="text-align: center;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+                <li style="text-align: left;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+                <li style="text-align: right;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+                <li style="text-align: justify;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h5>vertical align : 줄 내부에서의 위치 설정</h5>
+            <ul>
+                <li style="font-size: 35px;">
+                    Have a <span style="vertical-align: super; font-size: 15px;"> <img width="40" src="data:image/png;base64,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">
+                     </span> 
+                    Time!</li>
+                <li style="font-size: 35px;">Have a <span style="vertical-align: sub; font-size: 15px;"> Good</span> Time!</li>
+                <li style="font-size: 35px;">Have a <span style="vertical-align: baseline; font-size: 15px;"> Good</span> Time!</li>
+            </ul>
+        </li>
+        <li>
+            <h5>text-decoration : 다양한 종류의 밑줄</h5>
+
+            <ul>
+                <li style="text-decoration: crimson overlinne 1px dashed;">
+                    text-decoration : overline
+                </li>
+                <li style="">
+                    text-<span style="text-decoration: burlywood line-through 3px double;">decoration</span> : line-through
+                </li>
+                <li style="text-decoration: underline firebrick 2px wavy;">
+                    text-decoration : underline
+                </li>
+                <li style="text-decoration: underline overline line-through blue dotted;">
+                    multiple text-decoration
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h5>text-treansform : 대소문자 변경</h5>
+            <ul>
+                <li style="text-transform: uppercase;">
+                    Have a Good Time!
+                </li>
+                <li style="text-transform: lowercase;">
+                    Have a Good Time!
+                </li>
+                <li style="text-transform: capitalize;">
+                    Have a Good Time!
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h5>text-indent : 들여쓰기 설정</h5>
+            <p style="text-indent: 1.0em; text-align: justify;">
+                Have a Good Time!
+                Have a Good Time!
+                Have a Good Time!
+                Have a Good Time!
+                Have a Good Time!
+            </p>
+        </li>
+        <li>
+            <h5>letter-spacing : 글자 간격 설정</h5>
+            <ul>
+                <li style="letter-spacing: 3px;">Have a Good Time!</li>
+                <li style="letter-spacing: -3px;">Have a Good Time!</li>
+                <li style="letter-spacing: 1.0em;">Have a Good Time!</li>
+            </ul>
+        </li>
+        <li>
+            <h5>word-spacing : 단어 간격 설정</h5>
+        </li>
+        <li>
+            <h5>line-height : 줄 간격 설정</h5>
+            <ul>
+                <li style="line-height: 5px;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+                <li style="line-height: 15px;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+                <li style="line-height: 25px;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h5>white-space : 자동 줄 바꿈 설정</h5>
+            <ul>
+                <li style="white-space: normal;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+                <li style="white-space: nowrap;">
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                    Have a Good Time!
+                </li>
+                
+            </ul>
+        </li>
+    </ul>
+    
+</body>
+</html>

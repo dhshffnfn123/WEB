@@ -1,0 +1,25 @@
+html {
+    font-size: 15px;
+}
+
+div {
+    font-size: 25px;
+    border: solid black 1px;
+    margin: 5px;
+}
+
+#em2 {
+    width: 10.0em;
+}
+
+.rem2 {
+    width: 10.0rem;
+}
+
+.vw30 {
+    width: 30vw;
+}
+
+.vh30 {
+    width: 30vh;
+}

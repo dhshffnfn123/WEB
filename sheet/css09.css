@@ -1,0 +1,27 @@
+p {
+    font-size: 35px;
+    padding: 30px;
+}
+
+#shadow1 {
+    color: white;
+    text-shadow: -1px -1px 3px red;
+}
+
+#shadow2 {
+    color: white;
+    background-color: black;
+    text-shadow: 0 0 5px white,
+                    0 0 10px white,
+                    0 0 15px white,
+                    0 0 20px blue,
+                    0 0 30px blue;
+}
+
+#shado1 {
+    background-color: rgb(243, 208, 121);
+    color: rgb(253, 249, 249);
+    text-shadow: 0 0 50px red,
+                    0 0 50px red,
+                    0 0 50px red;
+}
