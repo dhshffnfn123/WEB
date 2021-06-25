@@ -3,6 +3,14 @@ p {
     padding: 30px;
 }
 
+div {
+    font-size: 40px;
+    padding: 30px;
+    margin-bottom: 300px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 #shadow1 {
     color: white;
     text-shadow: -1px -1px 3px red;
@@ -14,14 +22,128 @@ p {
     text-shadow: 0 0 5px white,
                     0 0 10px white,
                     0 0 15px white,
-                    0 0 20px blue,
-                    0 0 30px blue;
+                    0 0 20px orange,
+                    0 0 30px orange;
 }
 
 #shado1 {
     background-color: rgb(243, 208, 121);
     color: rgb(253, 249, 249);
-    text-shadow: 0 0 50px red,
-                    0 0 50px red,
-                    0 0 50px red;
+    text-shadow: 1px 1px 2px red,
+                    2px 2px 2px red,
+                    3px 3px 2px red,
+                    4px 4px 2px red,
+                    5px 5px 2px red,
+                    6px 6px 2px red,
+                    7px 7px 2px red,
+                    8px 8px 2px red,
+                    9px 9px 2px red,
+                    10px 10px 2px red,
+                    11px 11px 2px red,
+                    12px 12px 2px red,
+                    13px 13px 2px red,
+                    14px 14px 2px red,
+                    15px 15px 2px red,
+                    16px 16px 2px red,
+                    17px 17px 2px red,
+                    18px 18px 2px red,
+                    19px 19px 2px red,
+                    20px 20px 2px red,
+                    21px 21px 2px red;
+                    font-weight: bolder;
+    
+                }
+
+span {
+    font-weight: bolder;
+    background-color: rgb(243, 208, 121);
+    color: rgb(253, 249, 249);
+    text-shadow: 1px 1px 2px orange,
+                    2px 2px 2px orange,
+                    3px 3px 2px orange,
+                    4px 4px 2px orange,
+                    5px 5px 2px orange,
+                    6px 6px 2px orange,
+                    7px 7px 2px orange,
+                    8px 8px 2px orange,
+                    9px 9px 2px orange,
+                    10px 10px 2px orange,
+                    11px 11px 2px orange,
+                    12px 12px 2px orange,
+                    13px 13px 2px orange,
+                    14px 14px 2px orange,
+                    15px 15px 2px orange,
+                    16px 16px 2px orange,
+                    17px 17px 2px orange,
+                    18px 18px 2px orange,
+                    19px 19px 2px orange,
+                    20px 20px 2px orange,
+                    21px 21px 2px orange;
+}
+span2 {
+    font-weight: bolder;
+    background-color: rgb(243, 208, 121);
+    color: rgb(253, 249, 249);
+    
+    text-shadow: 1px 1px 2px purple,
+                    2px 2px 2px purple,
+                    3px 3px 2px purple,
+                    4px 4px 2px purple,
+                    5px 5px 2px purple,
+                    6px 6px 2px purple,
+                    7px 7px 2px purple,
+                    8px 8px 2px purple,
+                    9px 9px 2px purple,
+                    10px 10px 2px purple,
+                    11px 11px 2px purple,
+                    12px 12px 2px purple,
+                    13px 13px 2px purple,
+                    14px 14px 2px purple,
+                    15px 15px 2px purple,
+                    16px 16px 2px purple,
+                    17px 17px 2px purple,
+                    18px 18px 2px purple,
+                    19px 19px 2px purple,
+                    20px 20px 2px purple,
+                    21px 21px 2px purple;
+}
+
+#shado2 {
+    font-weight: bolder;
+    background-color: rgb(243, 208, 121);
+    color: rgb(253, 249, 249);
+    text-shadow: 100px 0 1px royalblue;
+    
+}
+
+#box {
+    font-weight: bolder;
+    background-color: rgb(243, 208, 121);
+    
+    color: rgb(253, 249, 249);
+    
+    box-shadow: 1px 1px 2px rgb(232, 188, 102),
+    2px 2px 2px rgb(232, 188, 102),
+    3px 3px 2px rgb(232, 188, 102),
+    4px 4px 2px rgb(232, 188, 102),
+    5px 5px 2px rgb(232, 188, 102),
+    6px 6px 2px rgb(232, 188, 102),
+    7px 7px 2px rgb(232, 188, 102),
+    8px 8px 2px rgb(232, 188, 102),
+    9px 9px 2px rgb(232, 188, 102),
+    10px 10px 2px rgb(232, 188, 102),
+    11px 11px 2px rgb(232, 188, 102),
+    12px 12px 2px rgb(232, 188, 102),
+    13px 13px 2px rgb(232, 188, 102),
+    14px 14px 2px rgb(232, 188, 102),
+    15px 15px 2px rgb(232, 188, 102),
+    16px 16px 2px rgb(232, 188, 102),
+    17px 17px 2px rgb(232, 188, 102),
+    18px 18px 2px rgb(232, 188, 102),
+    19px 19px 2px rgb(232, 188, 102),
+    20px 20px 2px rgb(232, 188, 102),
+    21px 21px 2px rgb(232, 188, 102),
+    22px 22px 10px black,
+    23px 23px 10px black,
+    24px 24px 10px black;
 }

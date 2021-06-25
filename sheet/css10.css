@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Indie+Flower&family=Kirang+Haerang&family=Nanum+Pen+Script&display=swap');
+
+html {
+    font-family: 'Indie Flower', cursive;
+}
+
+div {
+    font-size: 35px;
+}
+
+#div1 {
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+#dv1 {
+    font-family: 'Kirang Haerang', cursive;
+}
