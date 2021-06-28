@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_가상요소.html</title>
+    <style>
+        /* 첫 번째 글자만 스타일 변경*/
+        #exmaple {
+            text-indent: 1.0em;
+            text-align: justify; /*글자 좌우 맞춤*/
+        }
+        #example::first-letter {
+            text-transform: uppercase;
+            font-weight: bolder;
+            font-size: 2.0em;
+        }
+
+        #example::first-line {
+            text-decoration: underline solid 1px black;
+        }
+
+        #example::selection {
+            background-color: black;
+            color: yellow;
+        }
+        /* 해당 요소의 내부의 맨 앞에 내용을 추가할 수 있다 */
+        #example::before {
+            content: "before로 추가된 내용!";
+        }
+
+        #example::after {
+            content: "After로 추가된 내용!";
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h3># 가상 요소 (Pseudo Element)</h3>
+
+    <ul>
+        <li>가상 요소는 해당 요소의 특정 부분을 선택할 수 있다</li>
+        <li>선택자 뒤에 ::을 붙여 원하는 부분만 선택한다</li>
+        <li>::first_letter</li>
+        <li>::first_line</li>
+        <li>::before</li>
+        <li>::after</li>
+    </ul>
+
+    <hr>
+
+    <p id="example">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam dignissim arcu nulla, in ultrices diam imperdiet eu. 
+        Vestibulum sollicitudin neque non ipsum mollis, nec eleifend ex malesuada.
+        In interdum aliquet ornare. Fusce tristique tristique lacus ut pretium. 
+        Donec vel ante elit. 
+        Sed nibh nulla, placerat efficitur urna a, vulputate ornare nunc. 
+        Morbi ullamcorper orci nec tortor ultrices tempor. 
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Praesent viverra nunc arcu, quis gravida mi maximus nec.      
+    </p>
+
+
+    
+</body>
+</html>

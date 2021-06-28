@@ -1,0 +1,40 @@
+
+#inline-sample > span {
+    background-color: yellow;
+    border: solid 1px black;
+    width: 150px;
+    height: 100px;
+
+    display: inline;
+}
+#block-sample > span {
+    background-color: yellow;
+    border: solid 1px black;
+    width: 150px;
+    height: 100px;
+
+    display: block;
+}
+#inline-block-sample > span {
+    background-color: yellow;
+    border: solid 1px black;
+    width: 150px;
+    height: 100px;
+
+    display: inline-block;
+}
+
+#none {
+    width: 500px;
+    height: 300px;
+    background-color: coral;
+    color: white;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    visibility:hidden;
+}

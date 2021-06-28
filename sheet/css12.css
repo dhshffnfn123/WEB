@@ -1,0 +1,48 @@
+div {
+    font-size: 30px;
+}
+
+dl {
+    font-size: 35px;
+    border: dashed orange;
+    padding: 30px;
+}
+
+dt {
+    font-weight: bold;
+    border: firebrick 3px solid;
+    border-radius: 15px;
+    background-color: lemonchiffon;
+    padding: 5px;
+}
+
+dd {
+    font-size: 0.7em;
+}
+
+dd:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#click {
+    background-color: red;
+    color: white;
+    padding: 15px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    width: 100px;
+
+    border: outset gray 5px;
+}
+
+#click:active {
+    background-color: rgb(194, 6, 6);
+    border-style: inset;
+}
+
+input:checked + label{
+    color: cyan;
+    background-color: darkblue;
+}

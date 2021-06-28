@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../sheet/css12.css">
+</head>
+<body>
+
+    <h3># 가상 클래스 (Pseudo Class)</h3>
+
+    <ul>
+        <li>
+            선택자에 가상 클래스를 사용하여 해당요소의 특정 상황만을 선택할 수 있따
+        </li>
+        <li>
+            선택자 뒤에 : 을 붙여 원하는 상황을 선택한다
+        </li>
+    </ul>
+
+    <h3># 가상 클래스들</h3>
+    <dl>
+        <dt>firtst-child, nth-child(n/evne/odd), last-child</dt>
+        <dd>- 요소가 부모의 특정 번째 요소일 때를 선택함</dd>
+
+        <dt>first-of-typem nth-of-type(n/even/odd), last-of-type</dt>
+        <dd>- 요소가 같은 타입들 중에서 특정 번째 요소일 때를 선택함</dd>
+
+        <dt>hover</dt>
+        <dd>- 요소에 마우스가 올라가 있는 상황을 선택함</dd>
+
+        <dt>link</dt>
+        <dd>- 해당 요소가 링크일 때를 선택한다</dd>
+
+        <dt>active</dt>
+        <dd>- 해당 링크가 마우스로 활성화되고 있는 상황을 선택한다</dd>
+
+        <dt>visited</dt>
+        <dd>- 해당 링크가 이미 방문했던 링크일 때를 선택한다</dd>
+    </dl>
+
+    <p id="click">Click Me!</p>
+
+    <h3># 배우지 않은 가상 클래스를 하나 선택하고 적절한 예제</h3>
+
+    <h3>오늘 날씨는 좋은가요?</h3>
+    <div>
+        <input type="radio" name="my-input" id="yes">
+        <label for="yes">Yes</label>
+      
+        <input type="radio" name="my-input" id="no">
+        <label for="no">No</label>
+      </div>
+    
+</body>
+</html>

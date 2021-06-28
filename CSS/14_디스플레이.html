@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_디스플레이.html</title>
+    <style>
+        html {
+            font-size: 25px;
+        }
+        
+        div {
+           border: solid 1px black;
+           margin: 5px;
+           padding: 5px;
+
+            display: inline;
+        }
+
+        a {
+            border: solid 1px black;
+            margin: 5px;
+            padding: 5px;
+
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="../sheet/css14.css">
+</head>
+<body>
+    
+    <h3># display property</h3>
+
+    <ul>
+        <li>해당 요소가 어떻게 보여야 할지를 결정하는 속성</li>
+        <li>이 속성의 기본값으로는 inline과 block이 있다.</li>
+    </ul>
+
+    <hr>
+
+    <h3># inline 요소의 특징</h3>
+
+    <ul>
+        <li>문단 내부에서 영역을 지정할 때 사용한다</li>
+        <li>새 줄에서 시작하지 않고, 필요한 내용만큼의 영역을 차지한다</li>
+        <li>padding과 margin을 고려하지 않고 배치된다</li>
+    </ul>
+
+    <hr>
+
+    <div>div content</div>
+    <div>div content</div>
+    <div>div content</div>
+    <div>div content</div>
+    <div>div content</div>
+
+    <hr>
+
+    <h3># block 요소의 특징</h3>
+
+    <ul>
+        <li>항상 새 줄에서 시작한다</li>
+        <li>기본 너비는 100%여서 화면 끝까지 뻗어 나간다</li>
+        <li>padding과 margin을 고려하지 않고 배치된다</li>
+        <li>박스 취급</li>
+    </ul>
+
+    <a href="http://www.naver.com">NAVER</a>
+    <a href="http://www.naver.com">NAVER</a>
+    <a href="http://www.naver.com">NAVER</a>
+    <a href="http://www.naver.com">NAVER</a>
+    <a href="http://www.naver.com">NAVER</a>
+
+    <hr>
+
+    <h3># display: inline-block</h3>
+
+    <ul>
+        <li>글자 취급 받지만 padding과 margin이 적용된다</li>
+        <li>inline과 block의 단점을 모두 보완한 display값이다</li>
+    </ul>
+
+    <h5># inline test</h5>
+    <p id="inline-sample">
+        Lorem ipsum dolor sit amet, <span> consectetur </span> adipiscing elit.
+        Etiam dignissim arcu nulla, in <span> ultrices </span> diam imperdiet eu. 
+    </p> 
+
+    <h5># block test</h5>
+    <p id="block-sample">
+        Lorem ipsum dolor sit amet, <span> consectetur </span> adipiscing elit.
+        Etiam dignissim arcu nulla, in <span> ultrices </span> diam imperdiet eu. 
+    </p>
+
+    <h5># inline-block test</h5>
+    <p id="inline-block-sample">
+        Lorem ipsum dolor sit amet, <span> consectetur </span> adipiscing elit.
+        Etiam dignissim arcu nulla, in <span> ultrices </span> diam imperdiet eu. 
+    </p>
+
+    <h3># display: none</h3>
+
+    <p>해당 요소를 보이지 않게 숨긴다 (영역도 함께 사라진다)</p>
+
+    <p id="none">
+        보이지 않는 요소
+    </p>
+
+    <hr>
+
+    <h3># visibility: hidden</h3>
+
+    <p>해당 요소를 보이지 않게 숨긴다 (영역은 그대로 유지된다)</p>
+    
+    <p id="none" class="hidden"></p>
+        보이지 않는 요소
+    <hr>
+    
+    
+    
+</body>
+</html>

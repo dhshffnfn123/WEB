@@ -1,0 +1,86 @@
+.flex-container {
+    display: flex;
+    background-color: violet;
+}
+
+.flex-container > div {
+    background-color: white;
+    padding: 30px;
+    font-size: 30px;
+    margin: 5px;
+}
+
+/* flex-direction으로 flex container의 방향을 설정할 수 있다*/
+#container1 {
+    flex-direction: row-reverse;
+}
+
+#container2 {
+    flex-direction: column-reverse;
+}
+
+#container3 {
+    flex-wrap: wrap-reverse;
+}
+
+#container4 {
+    flex-wrap: nowrap;
+}
+
+.headline {
+    background-color: darkred;
+    color: white;
+
+    font-size: 70px;
+
+    padding: 30px;
+    text-align: center;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-bar > * {
+    width: 25%;
+    background-color: black;
+    color: white;
+    padding: 30px;
+    font-size: 30px;
+}
+
+.content {
+     display: flex;
+}
+
+.content > :first-child {
+    width: 30%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.side-bar > * {
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.content > :last-child {
+    width: 75%;
+    background-color: rosybrown;
+}
+
+.footer {
+    height: 250px;
+    background-color: burlywood;
+}
+
+
+
+
+
+
