@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3># 자바스크립트의 변수</h3>
+
+    <ul>
+        <li>자바 스크립트에는 변수 타입이 없다 (데이터 제외)</li>
+        <li>var : 단순하게 변수를 선언한다 (생략 가능)</li>
+        <li>let : 변경이 허용된 변수를 선언한다</li>
+        <li>const : 변경이 금지된 변수를 선언한다</li>
+    </ul>
+
+    <div id="out"></div>
+
+    
+
+    <script>
+        var a = 10;
+        let b = 12;
+        const c = 13;
+        d = 'advc';
+
+        //Javascript Object (HashMap과 유사함)
+        const o = {
+            name: '홍길동',
+            age: 12,
+        };
+
+        //Javascript Array
+        const arr = ['apple', banana, 'orange', 'kiwi', 'mango', 123];
+
+        //웹 브라우저의 콘솔에 출력
+        console.log(a + b + c + d);
+        console.log("여기 도착하면 버그난거임");
+
+        //경고창에 출력
+        window.alert('a + b + c : ' + (a + b + c));
+
+        //가져온 document의 object에 출력
+        const out = document.getElementById("out");
+        out.innerHTML = "a + b + c의 결과는 " + (a + b + c) + "입니다.";
+
+        //변수에 담긴 데이터들의 타입 알아보기
+        console.log(typeof a)
+        console.log(typeof b)
+        console.log(typeof c)
+        console.log(typeof d)
+        console.log(typeof out)
+        console.log(typeof obj);
+        console.log(typeof ouj.name);
+        console.log(typeof ouj.age);
+
+        console.log(obj.name);
+        console.log(obj.age);
+        console.log(obj['name']);
+        console.log(obj['age']);
+
+
+
+    </script>
+    
+</body>
+</html>

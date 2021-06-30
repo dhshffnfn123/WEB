@@ -1,0 +1,31 @@
+.nav-bar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+
+    flex-direction: column;
+}
+
+.nav-bar > a {
+    background-color: gray;
+    margin: 10px;
+    padding: 5px;
+}
+
+.nav-bar > a:visited {
+    color: white;
+}
+
+@media all and (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-bar > a {
+        background-color: red;
+        color: black;
+    }
+}

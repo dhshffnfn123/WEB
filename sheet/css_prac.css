@@ -1,45 +1,291 @@
+html {
+    background-color: black;
+}
+
+.product > div {
+    color: white;
+}
+
 #header {
     display: grid;
-    grid-template-columns: 12% 1fr 1fr 1fr;
+    grid-template-columns: 200px 304px 1fr 230px;
     position: fixed;
-    top: 50;
+    top: 0;
     left: 0;
     width: 100%;
     border-bottom: 1px solid #333;
     line-height: 34px;
     text-transform: uppercase;  
-    height: 35px;
+    height: 34px;
     background: rgb(0, 0, 0);
     font-size: 13px;
     color: white;
     column-gap: 2px;
+    z-index: 9999;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 200px 304px 1fr 100px;
+    top: 900px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+
+    line-height: 34px;
+    text-transform: uppercase;  
+    height: 34px;
+    background: rgb(0, 0, 0);
+    font-size: 13px;
+    color: white;
+    column-gap: 2px;
+    margin-top: 50px;
     
 }
 
 ul {
-    margin: 0%;
     list-style: none;
+    margin-left: -20px;
+}
+
+li {
+    float: left;
+    margin-top: -12px;
+    margin-right: 20px;
 }
 
 .logo {
-    text-align: center;
     font-size: 20px;
+    text-align: center;
+    border-right: 1px solid #333;
+    
+    height: 34px;
+}
+
+.footer-company {
+    text-align: center;
+    border-right: 1px solid #333;
+    font-weight: bold;
+    
+    height: 34px;
+}
+
+.footer-nav {
+    font-size: 13px;
+    font-weight: bold;
+    float: left;
+    margin-left: -8px;
     border-right: 1px solid #333;
 
+    
+
+    height: 34px;
+}
+
+.origin {
+    text-align: center;
+    font-weight: bold;
 }
 
 .nav {
+    font-size: 13px;
+    font-weight: bold;
     float: left;
+    margin-left: -10px;
     border-right: 1px solid #333;
-    padding: 0 5px;
-    color: red;
+
+    
+
+    height: 34px;
 }
 
+.burger_mobiledisplay {
+    border-right: 1px solid #333;
+    
+    height: 34px;
+}
 
-.nav li{
-    display: inline-block;
-    padding: 0 5px;
-    outline: none;
+.nav-secondary > div {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    
+}
+
+.header-account {
+    width: 80px;
+    padding: 0 0 0 15px;
+    border-right: 1px solid #333;
+    
+}
+
+.header-cart {
+    width: 70px;
+    padding: 0 0 0 15px;
+    border-right: 1px solid #333;
+}
+
+.header-lang {
+    width: 32px;
+    padding: 0 0 0 15px;
+    border-right: 1px solid #333;
+    background-color: rgb(53, 53, 53);
+    color: rgb(133, 133, 133);
+    
+}
+
+.product {
+    margin-top: 25px;
+    
+    display: grid;
+    background-color: black;
+    color: black;
+    width: 100%;
+   
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 613px 613px 613px 613px;
+
     
     
 }
+
+.product > * {
+    background-color: white;
+    font-size: 30px;
+}
+
+.product > div:first-child {
+    background-image: url(https://i.pinimg.com/564x/d2/0a/86/d20a861960dc17fb2c4ffde64ce77099.jpg);
+}
+
+.product > div:first-child:hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(2) {
+    background-image: url(https://i.pinimg.com/564x/79/cc/86/79cc86a7ae39cacdbe00355e3d1bcb3e.jpg);
+    background-repeat: no-repeat;
+    background-size: 18em;
+}
+
+.product > div:nth-child(2):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(3) {
+    background-image: url(https://i.pinimg.com/564x/c1/32/5a/c1325a2a8509d4b6a24123f21fa92c82.jpg);
+}
+
+.product > div:nth-child(3):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(4) {
+    background-image: url(https://i.pinimg.com/564x/13/8c/ef/138cef5896cebc69ca941a08a9ba8561.jpg);
+}
+
+.product > div:nth-child(4):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(5) {
+    background-image: url(https://i.pinimg.com/564x/81/18/a6/8118a6798e6f827ec8df7f5c34bf11b2.jpg);
+    background-repeat: no-repeat;
+    background-size: 18em;
+    
+}
+
+.product > div:nth-child(5):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(6) {
+    background-image: url(https://i.pinimg.com/564x/2b/a7/1d/2ba71dec524d97f31878907e5b991f15.jpg);
+}
+
+.product > div:nth-child(6):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(7) {
+    background-image: url(https://i.pinimg.com/564x/06/0e/c6/060ec699774c704992ef256013e2c9ad.jpg);
+}
+
+.product > div:nth-child(7):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(8) {
+    background-image: url(https://i.pinimg.com/564x/7f/69/ae/7f69ae1782bc8f17cf1ddff84def1c00.jpg);
+}
+
+.product > div:nth-child(8):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(9) {
+    background-image: url(https://i.pinimg.com/564x/a1/7b/7b/a17b7b52dd944079742b94933a90936c.jpg);
+}
+
+.product > div:nth-child(9):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+.product > div:nth-child(10) {
+    background-image: url(https://i.pinimg.com/564x/84/92/f3/8492f31312070fb4b1d52ab2f451a6ca.jpg);
+}
+
+.product > div:nth-child(10):hover {
+    filter: brightness(70%);
+    font-weight: bold;
+    color: black;
+}
+
+body {
+    margin-top:0; 
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
+}   
+
+#footer-info {
+    display: block;
+    float: none;
+    width: 1000px;
+    clear: both;
+    padding: 0px 15px;
+    border-top: 1px solid #333;
+}
+
+p {
+    font-size: 8px;
+    color: rgb(47, 47, 47);
+}
+
+
+/* 링크 폰트 설정*/
+a { text-decoration-line: none;} /*링크 밑줄 제거*/
+a:link { color: white; }
+a:hover {text-decoration-line: underline;}
+a:visited{ color: white; } /*사용자가 방문한 적이 있는 링크*/
+a:active { color: red}; /*링크를 클릭 했을 시*/

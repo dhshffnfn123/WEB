@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_반복문.html</title>
+    <link rel="stylesheet" href="../sheet/css반복문.css">
+    <style>
+        /* 구구단을 이쁘게 꾸미는 스타일 시트를 작성해보세요*/
+    </style>
+
+    
+</head>
+<body>
+    <!-- 구구단 만들어 보쏌 -->
+    
+    <div id="gugudan">
+        <script>
+
+            const arr = ['black' ,'red', 'orange', 'yellow', 'lightgreen', 'green', 'darkturquoise', 'blue', 'navy', 'purple'];
+
+            for(let i = 1; i <= 9; i++) {
+                document.write('<span style="text-shadow: 0 0 20px ' + arr[i] + ';">');
+                document.write('<br>');
+                console.log(i + '단');
+                document.write(i + '단');
+                document.write('<br>');
+                
+                
+                for(let j = 2; j <= 9; j++){
+                    console.log(i + ' ✖ ' + j + ' = ' + (i*j));
+                    document.write(i + ' ✖ ' + j + ' = ' + (i*j));
+                    //document.write('%d + ✖ + %d = %2d', i, j, (i*j));
+                    document.write('<br>');
+                    if(j == 9){
+                        document.write('</span>');
+                    }
+                   
+                   
+                }
+            }
+
+        </script>
+
+    </div>
+    
+</body>
+</html>

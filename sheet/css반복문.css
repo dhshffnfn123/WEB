@@ -1,0 +1,19 @@
+html {
+    background-color: rgb(242, 243, 208);
+}
+
+#gugudan {
+    display: grid;
+    border: 20px yellowgreen solid;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 150px;
+    background-color: white;
+    text-shadow: rgb(87, 194, 243) 0 0 13px;
+    
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3># JavaScript</h3>
+
+    <ul>
+        <li>웹 점유율 100%의 프로그래밍 언어</li>
+        <li>웹 브라우저가 해석하여 동작하는 스크립트 언어</li>
+    </ul>
+
+    <h3># JavaScript를 적용하는 3가지 방식</h3>
+
+    <ul>
+        <li>이벤트에 바로 사용하기</li>
+        <li>&lt;script&gt; 내부에 작성하기</li>
+        <li>다른 파일의 자바 스크립트 가져오기</li>
+    </ul>
+    <button onclick="document.getElementById('print').innerHTML = Date();"> 버튼 1</button>
+    <button onclick="getCurrentDate();">버튼 2</button>
+    <button onclick="getCurrentDate2()">버튼 3</button>
+
+    <div id="print"></div>
+
+    <script>
+        function getCurrentDate() {
+            document.getElementById("print").innerHTML = Date();
+        }
+    </script>
+    <script src="./js/js01.js"></script>
+    
+</body>
+</html>
