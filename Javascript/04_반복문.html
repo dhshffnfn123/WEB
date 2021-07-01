@@ -21,6 +21,7 @@
             const arr = ['black' ,'red', 'orange', 'yellow', 'lightgreen', 'green', 'darkturquoise', 'blue', 'navy', 'purple'];
 
             for(let i = 1; i <= 9; i++) {
+                document.write('<div class="step">')
                 document.write('<span style="text-shadow: 0 0 20px ' + arr[i] + ';">');
                 document.write('<br>');
                 console.log(i + '단');
@@ -35,6 +36,7 @@
                     document.write('<br>');
                     if(j == 9){
                         document.write('</span>');
+                        document.write('</div>')
                     }
                    
                    

@@ -1,0 +1,60 @@
+div {
+    border: solid black 3px;
+    
+
+    width: 1000px;
+    height: 700px;
+
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+/* 배경에 이미지 넣기 */
+div:first-child {
+    background-image: url(https://s3.orbi.kr/data/file/united/3542388477_S1pT2tDj_IMG_32075394326257.jpeg);
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    background-attachment: fixed;
+}
+
+div:nth-child(2) {
+    background-image: url(https://mblogthumb-phinf.pstatic.net/20120903_260/goom5473_1346648147629jWdPv_JPEG/daum_net_20120816_145124.jpg?type=w2);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+div:nth-child(3)    {
+    background-image: url(https://photo.coolenjoy.net/data/editor/2102/d778f4ec8403ae4caaaa6415ea73b28932c47005.jpg);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+div:nth-child(4)    {
+    background-image: url(https://img.freepik.com/free-photo/fancy-nemo-betta-or-siamese-fighting-fish_127090-423.jpg?size=338&ext=jpg);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+div:nth-child(5)    {
+    background-image: url(https://mblogthumb-phinf.pstatic.net/MjAxODA5MjZfMTk4/MDAxNTM3OTIzODE3MjU1.LR6eGUMM61FDx0kIU55zmPW_vHYdJfAhmGfyGClSiN8g.quviu23dqWdg9qpLvtHOkLrCPRZHWtw5l-4v_zTatOMg.JPEG.khk629105/crow-828944_960_720.jpg?type=w800);
+
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-attachment: fixed;
+
+}
+div:nth-child(6)    {
+    background-image: url(https://blog.kakaocdn.net/dn/EgE5r/btqWLYMKVF6/MaenRGI7s3m4LGc2aCxLwk/img.gif);
+
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-attachment: fixed;
+
+}
