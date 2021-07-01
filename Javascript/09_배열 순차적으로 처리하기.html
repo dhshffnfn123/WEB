@@ -13,6 +13,15 @@
 
     <ul id="out"></ul>
 
+    <table border="5" style="margin:auto;">
+        <tr>
+            <th>불합격자 명단</th>
+        </tr>
+        <tr>
+            <script src="./js/js_student.js"></script>
+        </tr>
+    </table>
+
     <script>
         const numbers = [45, 1, 9, 100, 55, 22, -37];
         let result = "";
@@ -53,14 +62,61 @@
             return value % 2 == 0;
         });
         const filter_result3 = numbers.filter(value => value > 40);
-        console.log('필터 결과1:', filter_result1);
+        console.log('필터 결과1:', filter_result);
         console.log('필터 결과2:', filter_result2);
         console.log('필터 결과3:', filter_result3);
 
+
+
+
+
+
+
+
+
+
+
+/*
         // 국/영/수 점수를 가진 랜덤 학생 100을 자바스크립트 오브젝트로 생성하고
-        // 1. map()을 이용해 모든 학생들의 평균 점수 배열을 생성
-        // 2. filter()를 이용해 평균 점수가 70점 이하인 학생들로 이루어진 배열을 생성하여 html 테이블에 출력 (점수가 가장 낮은 학생은 빨간 글씨로 출력)
+        const student = [];
         
+        for (let i = 0; i < 100; i++) {
+            const score = [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)];
+            student.push(score);
+        }
+
+        console.log(student);
+
+        // 1. map()을 이용해 모든 학생들의 평균 점수 배열을 생성
+        const avg = student.map(array => {
+            return Math.floor(array.reduce((a, b) => a + b, 0) / array.length); //a는 누적값, b는 현재값
+        });
+        console.log(avg);
+
+
+        // 2. filter()를 이용해 평균 점수가 70점 이하인 학생들로 이루어진 배열을 생성하여 html 테이블에 출력 (점수가 가장 낮은 학생은 빨간 글씨로 출력)
+        const filter = avg.filter(value => {return value < 70 });
+        filter.sort(function (a, b) {
+            return a - b;
+        });
+        console.log(filter);
+
+        for (let i = 0; i < filter.length; i++){
+            document.write('<td>');
+            document.getElementsByClassName("sco")[i].innerHTML = filter[i]; 
+            document.write('</td>');
+        }
+
+
+
+
+*/
+
+
+
+
+
+
 
         // 함수 선언은 자바 스크립트에서 가장 먼저 실행된다. (맨 밑에 있더라도)
         function myFunction(value, index, array) {
@@ -83,6 +139,12 @@
         function myMapFunction(value, index, array) {
             return value + 10;
         }
+
+       
+
+       
+
+       
     </script>
     
 </body>
