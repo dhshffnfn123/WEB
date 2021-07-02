@@ -13,6 +13,16 @@
 
     <ul id="out"></ul>
 
+    <table id="failed" border="3">
+        <tr>
+            <th>번호</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>평균</th>
+        </tr>
+    </table>
+
     <table border="5" style="margin:auto;">
         <tr>
             <th>불합격자 명단</th>
@@ -66,6 +76,23 @@
         console.log('필터 결과2:', filter_result2);
         console.log('필터 결과3:', filter_result3);
 
+        // # reduce(callback, init_value)
+         // - 배열 내의 모든 내용들을 순차적으로 사용해 하나의 결과를 생성한다
+         // - callback(acc, value, index, arr)
+         //     - acc: accumulator, 누산기, 값이 누적되는 곳
+         //     - value: 순차적으로 꺼낸 값 
+
+          var reduce_result = numbers.reduce((acc, value) => acc + value, 0);
+          console.log('reduce_result : ', reduce_result);
+
+          /* # every
+                - 배열 내의 모든 요소들이 테스를 통과하는지 검사한다  
+          
+          */
+
+          var test_result = numbers.every((value) => value > 0);
+
+          console.log('numbers의 값이 모두 양수인가요?', test_result);  //false
 
 
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_이벤트속성.html</title>
+</head>
+<boDy>
+
+    <h3># 모든 html 속성에 자바스크립트 이벤트 속성을 추가할 수 있다</h3>
+
+    <ul>
+        <li>onclick: 해당 요소를 클릭했을 때</li>
+        <li>onmouseover: 해당 요소에 마우스가 올라갔을 때</li>
+        <li>onkeydown : 키보드가 눌렸을 때</li>
+        <li>onload : 브라우저가 페이지 로딩을 모두 끝냈을 때</li>
+    </ul>
+
+    <hr>
+
+    <input type="text" 
+    onkeydown="console.log('키보드에 무언가 눌림')"
+    onmouseover="console.log('마우스 올라감');" 
+    onclick="console.log('클릭함');"
+    onload="console.log('페이지 로딩 끝남');" 
+    >
+    <input type="text" id="test">
+
+    <hr>
+
+    <textarea id="content" cols="30" rows="10"></textarea>
+
+    <script>
+        const test_input = document.getElementById("test");
+        const test_area = document.getElementById("content");
+
+        // 자바스크립트로 이벤트 처리 콜백 함수 설정하는 방법 1           
+        test_input.onkeydown = (event) => {
+            // 어느 태그에나 존재하는 기본동작을 막아준다
+            event.preventDefault();
+            console.log(event);
+        }
+
+        // 콜백 함수 설정 방법 2 -- 마우스 클릭 시 포인터의 위치를 출력해줌
+        test_area.addEventListener('click', (e) => {
+            console.log(e)
+        }, false);
+    </script>
+    
+</boDy>
+</html>

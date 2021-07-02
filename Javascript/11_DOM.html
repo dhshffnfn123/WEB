@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_DOM.html</title>
+</head>
+<body>
+
+    <h3># DOM (document Object Model)</h3>
+
+    <ul>
+        <li>웹 브라우저는 html코드의 구조를 해석하여 document 객체를 생성한다</li>
+        <li>자바스크립를 통해 HTML문서의 모든것을 수정할 수 있다</li>
+        <li>HTML문서의 css, 속성, 내용, 태그, 이벤트... 등등</li>
+    </ul>
+
+    <h3># 원하는 html요소를 찾는 메서드들</h3>
+
+    <ul>
+        <li>document.getElementById(id)</li>
+        <li>document.getElementByTagName(tag_name)</li>
+        <li>document.getElementByClassName(class_name)</li>
+    </ul>
+
+    <h3># 찾은 html요소를 변경하는 방법</h3>
+
+    <ul>
+        <li>element.innerHTML : 요소의 태그 사이 내용</li>
+        <li>element.attribute : 요소의 속성에 접근</li>
+        <li>element.setAttribute(name, value) : 요소의 속성에 접근2</li>
+        <li>element.style.property : 요소의 스타일 속성에 접근</li>
+    </ul>
+    
+    <p id="" class="">babo</p>
+    <p id="" class="warning">babo</p>
+    <p id="" class="warning">babo</p>
+    <p id="" class="">babo</p>
+    <p id="" class="">babo</p>
+    <p id="" class="">babo</p>
+    <div id="" class=""></div>
+    <div id="" class="warning"></div>
+    <div id="" class=""></div>
+
+    <button id="warning_btn">경고!</button>
+    <button id="warning_off">경고 끄기</button>
+
+
+    <script>
+        // document: 웹브라우저가 html문서를 해석하여 생성해놓은 웹페이지 구조
+        const waringBtn = document.getElementById('warning_btn');
+        const offBtn = document.getElementById('warning_off');
+
+        waringBtn.addEventListener('click', (e) =>{
+            makeWarning();
+        });
+
+        offBtn.addEventListener('click', (e) =>{
+            offWarning();
+        });
+        
+
+        function makeWarning() {
+            // nodes는 Array가 아닌 Array 사촌(HTMLCollection)이다.
+            //(forEach가 구현되어 있지 않음)
+            const nodes = document.getElementsByClassName('warning');
+            
+            for(i = 0; i < nodes.length; ++i){
+                nodes[i].style.backgroundColor = 'yellow';
+                nodes[i].style.padding = '15px';    
+                nodes[i].style.border = 'dashed 3px black';
+            }
+        }
+
+        function offWarning() {
+            const nodes = document.getElementsByClassName('warning');
+
+            for(i = 0; i < nodes.length; ++i){
+                nodes[i].style.backgroundColor = 'white';
+                nodes[i].style.padding = '0px';    
+                nodes[i].style.border = 'none';
+            }
+
+        }
+            
+        
+    </script>
+    
+</body>
+</html>

@@ -43,3 +43,71 @@
             
         }
 
+
+
+
+
+
+
+
+
+        // function 키워드로 생성하지 않는 함수는 맨 위에 있어야 한다
+        const getRandomScore = () => Number(Math.random() * 101)
+        
+        //강사쌤 버전
+
+        var stu = [];
+        var stu_avg = [];
+
+        for (var i = 0; i < 100; ++i){
+            stu.push({
+                stu_num: 1 + i,
+                kor: getRandomScore(),
+                eng: getRandomScore(),
+                math: getRandomScore(),
+            });
+        }
+
+        /*
+        stu_avg = stu.map((stu_value) => {
+            return (stu_value.kor + stu_value.eng + stu_value.math) / 3.0;
+        });
+        */
+
+        //for Each가 더 좋은 방법이다
+        stu.forEach((value, index, array) => {
+            array[index]['avg'] = (value.kor + value.eng + value.math) / 3.0;
+        });
+
+         const failed = stu.filter((stu) => {
+             return Math.floor(stu.avg <= 70);
+         });
+
+            console.log(failed);
+         
+           const lowest_avg = failed.reduce((acc, value) => {
+               return acc > stu.avg ? acc : stu.avg;
+           }, 100);
+           console.log(lowest_avg);
+         
+           
+           // 컬러는 스타일 시트로 변경하는 것이 좋다
+           // <style> tr.worst {color: red; font-size: 1.3em;} // tr.normal {color: black;}
+         const failed_table_rows = failed.map((stu) => {
+            return `<tr class="${stu.avg == lowest_avg ? 'worst' : 'normal'}">
+            <td>${stu.stu_num}</td>
+            <td>${stu.kor}</td>
+            <td>${stu.eng}</td>
+            <td>${stu.math}</td>
+            <td>${stu.avg}</td>
+            </tr>`;
+         });
+
+         
+       
+
+
+         document.getElementById("failed").innerHTML += 
+            failed_table_rows.reduce((accumulator, row) => accumulator + row);
+
+         console.log(failed)
