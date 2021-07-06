@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_Node.html</title>
+</head>
+<body>
+
+    <h3># Node</h3>
+    <ul>
+        <li>document에 있는 모든 것은 Node다</li>
+        <li>요소를 더욱 세분화 하면 element node와 text node로 나눌 수 있다</li>
+        <li>주석들은 comment node이다</li>
+    </ul>
+
+    <hr>
+
+    <div id="content">
+        <p>This is paragraph 1.</p>
+        <p>This is paragraph 2.</p>
+    </div>
+
+    <button onclick="doPush();">Push!</button> <br>
+    <button onclick="doPop();">Pop!</button> <br>
+
+    <script>
+        const content = document.getElementById("content");
+        const first_para = document.querySelector("#content > p:first-child");
+        const second_para = document.querySelector("#content > p:nth-child(2)");
+
+        function doPush() {
+            //새 요소 인스턴스를 생성한다 (요소를 객체지향적으로 추가)
+            const new_para = document.createElement("p");
+            const text_node = document.createTextNode("This is new paragraph");
+
+            new_para.setAttribute('id','abc');
+            new_para.setAttribute('class', 'warning danger info');
+            
+            
+            new_para.appendChild(text_node);
+            content.insertBefore(new_para, second_para);
+        }
+
+        function doPop() {
+            const element_to_delete = document.querySelector('#content > :last-child');
+            element_to_delete.remove();
+        }
+        
+    </script>
+    
+</body>
+</html>

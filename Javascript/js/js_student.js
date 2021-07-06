@@ -68,12 +68,12 @@
             });
         }
 
-        /*
+        
         stu_avg = stu.map((stu_value) => {
             return (stu_value.kor + stu_value.eng + stu_value.math) / 3.0;
         });
-        */
-
+        
+        
         //for Each가 더 좋은 방법이다
         stu.forEach((value, index, array) => {
             array[index]['avg'] = (value.kor + value.eng + value.math) / 3.0;

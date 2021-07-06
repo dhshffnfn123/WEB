@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15_BOM.html</title>
+</head>
+<body>
+
+    <h3>브라우저 모델 (Browser Object Model)</h3>
+
+    <ul>
+        <li>window : 웹 브라우저와 소통하기 위한 모델</li>
+        <li>window.screen : 자바스크립트의 모든 객체, 함수, 변수들은 window객체의 멤버가 된다</li>
+        <li>window.history : 웹 브라우저의 페이지 이동 내역을 담고 있는 객체</li>
+        <li>window.document : DOM. 모든 html코드 내용을 담고 있는 객체</li>
+        <li>window.location : 현재 웹 브라우저가 보고 있는 위치(페이지)에 관한 객체</li>
+        <li>window.navigator : 해당 웹 브라우저에 관한 정보</li>
+    </ul>
+
+    <script>
+        //window
+        console.log('---- Window Size ----');
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+
+        /*
+        window.alert('경고');
+        let message = window.prompt('하고 싶은 말이 있어');
+        console.log(message);
+        let result = window.confirm('축하해 아이도 낳고 사랑받으면서 예쁘게 잘 살아야 해')
+        console.log(result);
+        */
+        
+        console.log('작업 표시줄을 제외한 너비 : ',screen.width);
+        console.log('작업 표시줄을 제외한 높이 : ',screen.height);
+
+        console.log(screen.availHeight);
+        console.log(screen.availWidth);
+
+
+        // Location
+        console.log(location.href); // 브라우저가 현재 보고 있는 URL (href)
+        console.log(location.hostname);// 웹 사이트 주소
+        console.log(location.pathname); // 현재 페이지의 URI
+        console.log(location.protocol); // 사용 프로토콜
+        console.log(location.port); // 사용 포트번호 (기본 포트 번호는 출력하지 않음)
+
+        //location.href = 'https://naver.com';
+        //location.assign('https://naver.com');
+
+        // History
+
+        // history.back() : 뒤로 버튼을 누른 효과
+        // history.forward() : 앞으로 버튼을 누른 효과
+        // history.go(상대적인 거리) : -1은 바로 이전 페이지, +1은 바로 다음 페이지 0은 새로고침
+
+        //# 인위적인 history를 직접 추가할 수 있다 (이전 페이지, 다음페이지 조작 가능)
+
+        // history.pushState(data, title, url) : 히스토리를 추가
+        // history.replaceState(data, title, url) : 현재 히스토리 상태를 매개변수에 전달한 상태로 변경
+        history.pushState({page:1}, 'title 1', '?page=1');
+        history.pushState({page:2}, 'title 2', '?page=2');
+        history.pushState({page:3}, 'title 3', '?page=3');
+        history.replaceState({page:3}, 'title 2', '?page=3');
+
+        //history.back();
+        history.back();
+
+        console.log(navigator.appName);
+        console.log(navigator.appCodeName);
+        console.log(navigator.userAgent);
+        
+    </script>
+    
+</body>
+</html>

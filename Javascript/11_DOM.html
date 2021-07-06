@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h3># DOM (document Object Model)</h3>
+    <h3># DOM (Document Object Model)</h3>
 
     <ul>
         <li>웹 브라우저는 html코드의 구조를 해석하여 document 객체를 생성한다</li>
@@ -31,6 +31,8 @@
         <li>element.attribute : 요소의 속성에 접근</li>
         <li>element.setAttribute(name, value) : 요소의 속성에 접근2</li>
         <li>element.style.property : 요소의 스타일 속성에 접근</li>
+        <li>document.querySelector(css_selector)</li>
+        <li>document.querySelectorAll(css_selector)</li>
     </ul>
     
     <p id="" class="">babo</p>
@@ -46,11 +48,55 @@
     <button id="warning_btn">경고!</button>
     <button id="warning_off">경고 끄기</button>
 
+    <hr>
+
+    <img src="../assets/image/city.jpeg" width="300" id="img1"> <br>
+    <button id="next_img">Next</button>
+    <button id="prev_img">Prev</button>
+
 
     <script>
+        //const main_image = document.querySelector('img'); // img태그 중에서 맨 앞에 있는 것만 가져옴
+        const img_path_list = [
+            '../assets/image/city.jpeg',
+            '../assets/image/coffees.jpg',
+            '../assets/image/fruits.jpg',
+        ];
+
+        // 강사쌤 버전
+        let img_index = 0;
+
+
+        document.querySelector("#prev_img").addEventListener(
+            'click',
+            (e) => {
+                main_image.src = img_path_list[--img_index < 0 ? (img_index = img_path_list.length - 1) : img_index];
+            }
+        )
+        document.querySelector("#next_img").addEventListener(
+            'click',
+            (e) => {
+                main_image.src = img_path_list[++img_index % img_path_list.length];
+            }
+        )
+
+        
+        
         // document: 웹브라우저가 html문서를 해석하여 생성해놓은 웹페이지 구조
         const waringBtn = document.getElementById('warning_btn');
         const offBtn = document.getElementById('warning_off');
+
+        const warningNodes = document.querySelectorAll('.warning');
+        const nextBtn = document.querySelector('#next_img');
+        const prevBtn = document.querySelector('#prev_img')
+
+        nextBtn.addEventListener('click', (e) =>{
+            nextImg();
+        });
+
+        prevBtn.addEventListener('click', (e) => {
+            prevImg();
+        });
 
         waringBtn.addEventListener('click', (e) =>{
             makeWarning();
@@ -59,28 +105,52 @@
         offBtn.addEventListener('click', (e) =>{
             offWarning();
         });
+
+        let i = 0;
+        
+       function nextImg() {
+           i++;
+           if(i == 3) {
+               i = 0;
+           }
+           document.querySelector('#img1').setAttribute('src', img_path_list[i]);
+       }
+
+       function prevImg() {
+           i--;
+           if(i < 0) {
+            i = 2;
+        }
+        document.querySelector('#img1').setAttribute('src', img_path_list[i]);   
+       }
         
 
         function makeWarning() {
             // nodes는 Array가 아닌 Array 사촌(HTMLCollection)이다.
             //(forEach가 구현되어 있지 않음)
-            const nodes = document.getElementsByClassName('warning');
+
+           // const nodes = document.getElementsByClassName('warning');
             
-            for(i = 0; i < nodes.length; ++i){
+            const nodes = document.getElementsByTagName('li');
+
+            
+            //for(i = 0; i < nodes.length; ++i){}
+            Array.from(nodes).forEach((node) => {
                 nodes[i].style.backgroundColor = 'yellow';
                 nodes[i].style.padding = '15px';    
                 nodes[i].style.border = 'dashed 3px black';
-            }
+            });
         }
 
         function offWarning() {
-            const nodes = document.getElementsByClassName('warning');
+            const warningNodes = document.getElementsByClassName('warning');
 
-            for(i = 0; i < nodes.length; ++i){
+            Array.from(warningNodes).forEach((node)=> {
+           // for(i = 0; i < nodes.length; ++i){
                 nodes[i].style.backgroundColor = 'white';
                 nodes[i].style.padding = '0px';    
                 nodes[i].style.border = 'none';
-            }
+            });
 
         }
             

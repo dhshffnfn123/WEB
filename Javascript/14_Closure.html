@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_Closure.html</title>
+</head>
+<body>
+    <h3># 자바스크립트에서 전역변수는 최대한 자제하는 것이 좋다</h3>
+
+    <p> 
+        ()를 사용해 변수의 영역을 명확하게 지정하여 사용하는 것이 좋다.
+    </p>
+
+    <script>
+        
+
+        // self-invoke function : 함수를 선언한 다음 바로 실행시켜버리는 방식
+       (function functionA() {
+           let x = 10;
+           console.log("Hi!!");
+           return function () {
+                x += 1;
+                return x;
+           };
+       })();
+
+       const add = (function functionB() {
+           let a = 10; // 한번 쓰고 버리는 것,  한번만 실행되는 영역, 메모리에 a가 따로 저장되어 버림
+           return () => a += 1
+       })();
+
+       const  test = (function () {
+           let b = 123;
+           return {
+               add : () => b += 1,
+               minus : () => b -= 1
+           };   
+       })();
+
+       console.log(test.add());
+       console.log(test.add());
+       console.log(test.add());
+       console.log(test.minus());
+       console.log(test.minus());
+       console.log(test.minus());
+       
+       
+       //functionA(); // 괄호를 벗어나면서 사라지기 때문에 존재하지 않는다
+       // console.log(x); // 존재하지 않는 변수
+
+
+       //a에 절대로 직접 접근할 수 없지만 값을 변화시킬 순 있음. (private효과)
+       console.log(add());
+       console.log(add());
+       console.log(add());
+       console.log(add());
+
+    </script>
+</body>
+</html>

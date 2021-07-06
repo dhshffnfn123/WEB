@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_Class.html</title>
+</head>
+<body>
+
+    <h3># 자바스크립트에서 클래스와 인스턴스 생성하기</h3>
+
+    <h3># 자바 스크립트 프로토타입 (prototype)</h3>
+
+    <ul>
+        <li>만약 프로그래머가 Coffee라는 클래스를 정의했을 때 Coffee도 Coffee.prototype의 자식이다</li>
+        <li>Coffee 클래스의 가장 원형이 되는 형태를 prototype이라고 한다.</li>
+        <li>해당 클래스의 prototype을 수정하면 모든 인스턴스들이 영향을 받는다</li>
+    </ul>
+
+    <script>
+        function Coffee(name, origin, price, size) {
+            this.name = name;
+            this.origin = origin;
+            this.price = price;
+            this.qty = qty;
+            this.size = size;
+            this.sizePrice = function () {
+                switch (size.toLowerCase()) {
+                    case 'tall' :
+                        return 0;
+                    case 'grande' :
+                        return this.qty * 500;
+                    case 'venti' :
+                        return this.qty * 1000;
+                }
+            };
+        }
+
+        // 메서드 추가
+        Coffee.prototype.calcPrice = function (num) {
+            return this.qty * this.price;
+        };
+
+        //오버라이딩
+        Coffee.prototype.toString = function () {
+        return `${this.origin}산 ${this.name}`;
+        };    
+
+        const americano = new Coffee('아메리카노', '미국', 2000, 5, 'Grande');
+        const cafe_latte = new Coffee('카페라떼', '브라질', 3500, 7, 'Venti');
+
+        console.log(americano);
+        console.log(cafe_latte);
+
+        console.log(americano.toString());
+        console.log(americano.calcPrice(5) + americano.sizePrice());
+    </script>
+    
+</body>
+</html>
