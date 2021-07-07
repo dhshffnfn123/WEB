@@ -17,33 +17,30 @@
     
     <div id="gugudan">
         <script>
-
+            
             const arr = ['black' ,'red', 'orange', 'yellow', 'lightgreen', 'green', 'darkturquoise', 'blue', 'navy', 'purple'];
-
+            
             for(let i = 1; i <= 9; i++) {
                 document.write('<div class="step">')
-                document.write('<span style="text-shadow: 0 0 20px ' + arr[i] + ';">');
-                document.write('<br>');
-                console.log(i + '단');
-                document.write(i + '단');
-                document.write('<br>');
-                
-                
-                for(let j = 2; j <= 9; j++){
-                    console.log(i + ' ✖ ' + j + ' = ' + (i*j));
-                    document.write(i + ' ✖ ' + j + ' = ' + (i*j));
-                    //document.write('%d + ✖ + %d = %2d', i, j, (i*j));
-                    document.write('<br>');
-                    if(j == 9){
-                        document.write('</span>');
-                        document.write('</div>')
-                    } 
-                }
-            }
-        
-
+                    document.write('<span style="text-shadow: 0 0 20px ' + arr[i] + ';">');
+                        document.write('<br>');
+                        console.log(i + '단');
+                        document.write(i + '단');
+                        document.write('<br>');
+                        
+                        
+                        for(let j = 2; j <= 9; j++){
+                            console.log(i + ' ✖ ' + j + ' = ' + (i*j));
+                            document.write(i + ' ✖ ' + j + ' = ' + (i*j));
+                            //document.write('%d + ✖ + %d = %2d', i, j, (i*j));
+                            document.write('<br>');
+                            if(j == 9){
+                                document.write('</span>');
+                                document.write('</div>');
+                            } 
+                        }
+                    }  
         </script>
-
     </div>
     
 </body>
