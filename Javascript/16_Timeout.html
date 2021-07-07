@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_Timeout.html</title>
+
+    <style>
+        .clock {
+            /*
+            border: solid black 3px;
+            font-weight: bold;
+            */
+            
+            text-align: center;
+            font-size: 30px;
+            box-shadow: blue 0 0 15px;
+            height: 150px;
+            width: 350px;
+            margin: auto;
+            background-color: rgb(243, 208, 121);
+    color: rgb(253, 249, 249);
+    text-shadow: 1px 1px 2px red,
+                    2px 2px 2px red,
+                    3px 3px 2px red,
+                    4px 4px 2px red,
+                    5px 5px 2px red,
+                    6px 6px 2px red,
+                    7px 7px 2px red,
+                    8px 8px 2px red,
+                    9px 9px 2px red,
+                    10px 10px 2px red,
+                    11px 11px 2px red,
+                    12px 12px 2px red,
+                    13px 13px 2px red,
+                    14px 14px 2px red,
+                    15px 15px 2px red,
+                    16px 16px 2px red,
+                    17px 17px 2px red,
+                    18px 18px 2px red,
+                    19px 19px 2px red,
+                    20px 20px 2px red,
+                    21px 21px 2px red;
+                    font-weight: bolder;
+    
+        }
+    </style>
+</head>
+<body>
+    
+    <h3># window.setTimeout(callback, millisec)</h3>
+
+    <p>전달한 시간만큼 기다린 후에 콜백 함수를 한번 실행한다.</p>
+
+    <h3># window.setInterval(callback, millisec)</h3>
+
+    <p>전달한 시간마다 콜백 함수를 실행한다.</p>
+
+    <!-- 자바스크립트를 이용하여 매 초마다 시간을 변하게 해보셈-->
+    <div class="clock">시간을 출력해보자!</div>
+
+    <script>
+        /*
+        window.setTimeout(() => {
+            window.alert('5초가 지났습니다!!!');
+        }, 5000);
+        */
+
+       
+       window.setInterval(() => {
+           getTime();
+        }, 1000);
+        
+
+        // class는 배열로 지정을 해주어야 한다!
+        function getTime() {
+            var now = new Date();
+            var box = document.getElementsByClassName('clock')[0];
+            console.log(now);
+            box.innerHTML = '시간을 출력해보자!<br><br>' + now.toLocaleTimeString();
+        }
+
+    </script>
+
+</body>
+</html>
