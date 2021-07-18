@@ -5,20 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI 구현.html</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|material-icons-outlined" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6120f3feb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../sheet/csstest.css">
 </head>
 <body>
     <div id="header">
         <div id="stat">
-            <div class="level">level</div>
-            <div class="hpmp">hpmp</div>
-            <div class="stat">stat1 stat2 stat3 stat4</div>
+            <div class="level"></div>
+            <div class="hpmp"></div>
+            <div class="stat"></div>
         </div>
-        <div id="item">item</div>
-        <div id="cash">cash</div>
-        <div id="gold">gold</div>
-        <div id="exchange">exchange</div>
-        <div id="exit">exit</div>
+        <div class="potion"></div>
+        <div class="leaf"></div>
+        <div id="cash"></div>
+        <div id="gold"></div>
+        <div id="null"></div>
+        <div id="exchange"><span class="material-icons-outlined">
+            query_stats
+            </span>  거래소</div>
+        <div id="exit">
+            <button class="exit_btn"><span style="font-size: 30px;" class="material-icons-outlined">
+                exit_to_app
+                </span></button>
+        </div>
     </div>
-</body>
+
+    <div id="header2">
+        <div class="search"><span style="position: relative; bottom: -5px; font-size: 25px;" class="material-icons-outlined">
+            search
+            </span> 검  색</div>
+        <div class="sale"><span style="position: relative; bottom: -5px; font-size: 25px;" class="material-icons-outlined">
+            loyalty
+            </span> 판  매</div>
+        <div class="calculate"><span style="position: relative; bottom: -5px; font-size: 25px;" class="material-icons-outlined">
+            paid
+            </span> 정  산</div>
+        <div class="breakdown"><span style="position: relative; bottom: -5px; font-size: 25px;" class="material-icons-outlined">
+            request_quote
+            </span> 정산&emsp;내역</div>
+    </div>
+
+    <div id="menu">
+        <div><span style="position: relative; bottom: -3px; font-size: 23px;" class="material-icons-outlined">
+            settings
+            </span> 검색 조건</div>
+        <div> 전체<span style="position: relative; right: -90px; bottom: 3px;">▶</span></div>
+        <div> 무기<span style="position: relative; right: -90px; bottom: 3px;">▶</span></div>
+        <div> 방어구<span style="position: relative; right: -80px; bottom: 3px;">▶</span></div>
+        <div> 장신구<span style="position: relative; right: -80px; bottom: 3px;">▶</span></div>
+        <div> 스킬북<span style="position: relative; right: -80px; bottom: 3px;">▶</span></div>
+        <div> 소모품<span style="position: relative; right: -80px; bottom: 3px;">▶</span></div>
+    </div>
+
+    <div id="main">
+        <div class="text">일반, 강화 + 0, 속성 없음</div>
+        <div class="search_item">
+            <input name="search_item" type="text" placeholder="&emsp;아이템 이름을 입력하세요">
+            <input type="submit" value="전체 초기화">
+        </div>
+        <div class="name_name">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;이름&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;이름</div>
+        <div class="item"><img src="../../assets/HTML/가이아.JPG" alt="가이아"><span class="item_name">가이아</span>
+        <span class="property1">요정</span>
+        <button class="sale_btn1">판매&emsp;목록</button>
+        </div>
+
+
+        <div class="item"><img src="../../assets/HTML/강철마나지팡이.JPG" alt="지팡이"><span class="item_name">강철 마나의 지팡이</span>
+        <span class="property2">마법사</span>
+        <button class="sale_btn2">판매 목록</button>
+        </div>
+
+
+        <div class="item"><img src="../../assets/HTML/다크엘프의검.JPG" alt="검"><span class="item_name">고대 다크엘프의 검</span>
+        <span class="property3">요정</span>
+        <button class="sale_btn3">판매 목록</button>
+        </div>
+
+
+        <div class="item"><img src="../../assets/HTML/광전사의도끼.JPG" alt="도끼"><span class="item_name">광전사의 도끼</span>
+        <span class="property4">기사</span>
+        <button class="sale_btn4">판매 목록</button>
+        </div>
+
+
+        <div class="item"><img src="../../assets/HTML/그라디우스.JPG" alt="그라디우스"><span class="item_name">그라디우스</span>
+        <span class="property5">기사/군주</span>
+        <button class="sale_btn5">판매 목록</button>
+        </div>
+
+
+        <div class="item"><img src="../../assets/HTML/광풍의 도끼.JPG" alt="도끼2"><span class="item_name">광풍의 도끼</span>
+        <span class="property6">기사/요정/마법사/군주</span>
+        <button class="sale_btn">판매 목록</button>
+        </div>
+
+
+        <div class="item"><img src="../../assets/HTML/나이트발드.JPG" alt="나이트발드"><span class="item_name">나이트발드의 양손검</span>
+        <span class="property7">기사</span>
+        <button class="sale_btn6">판매 목록</button>
+        </div>
+
+
+        <div class="item"><img src="../../assets/HTML/난쟁이족 검.JPG" alt="난쟁이 검"><span class="item_name">난쟁이족 검</span>
+        <span class="property8">기사/요정/마법사/군주</span>
+        <button class="sale_btn">판매 목록</button>
+        </div>
+
+
+    </div>
+    </body>
 </html>

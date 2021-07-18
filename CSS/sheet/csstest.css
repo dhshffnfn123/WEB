@@ -1,35 +1,452 @@
-div {
+font-face {
+  font-family: 'Material Icons';
+  
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+html {
+  background-color: rgba(19, 21, 21, 50%);
+  background-image: url(https://img.appstory.co.kr/@files/monthly.appstory.co.kr/content/201710/5cb00799f463a63e3989226aaee080d4.jpg);
+  background-size: cover;
+}
+
+
+body {
+  background-color: rgba(19, 21, 21, 50%);
 }
 
 #header > div {
-  border-right: red solid 1px;
-  margin: auto;
+  
+   margin: auto;
 }
 
 #header {
   border: 1px solid black;
-  float: left;
   display: grid;
-  grid-template-columns: 200px 50px 100px 1fr 100px 1fr;
+  grid-template-columns: 230px 80px 50px 150px 100px 1fr 1fr 80px;
   width: 100%;
-  height: 100px;
+  height: 65px;
+  background-color: rgb(19, 21, 21);
 }
 
 #stat {
   border: solid 1px black;
-  background-color: cadetblue;
   height: 100%;
   width: 100%;
 }
 
 .level {
+  background-image: url(../../assets/HTML/레벨.JPG);
   float: left;
-  height: 70px;
+  height: 65%;
+  width: 20%;
   background-color: chartreuse;
 }
 
 .hpmp {
+  background-image: url(../../assets/HTML/체력.JPG);
   background-color: coral;
   text-align: center;
-  height: 70px;
+  height: 65%;
+  background-size: 230px, 60px;
 }
+
+.stat {
+  background-image: url(../../assets/HTML/스탯.JPG);
+  background-color: hotpink;
+  height: 35%;
+}
+
+.potion {
+ background-image: url(../../assets/HTML/포션.JPG);
+ height: 55px;
+ width: 52px;
+ float: left;
+  
+}
+
+.leaf {
+   background-image: url(../../assets/HTML/나뭇잎.JPG);
+  
+   height: 55px;
+   width: 52px;
+}
+
+#cash {
+  background-image: url(../../assets/HTML/보석.JPG);
+  height: 55px;
+  width: 170px;
+}
+#gold {
+  background-image: url(../../assets/HTML/골드.JPG);
+  height: 55px;
+  width: 200px;
+}
+
+#exchange {
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+}
+
+.exit_btn {
+ color: white;
+ background-color: rgb(77, 44, 44);
+ border: solid rgb(212, 145, 145);
+}
+
+#header2 {
+  margin-top: 1px;
+  color: white;
+  border-top: rgb(73, 73, 73) solid 1px;
+  border-bottom: rgb(73, 73, 73) solid 1px;
+  background-color: rgba(19, 21, 21, 50%);
+  width: 100%;
+  height: 30px;
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px 1fr;
+  text-shadow: gold 0 0 4px;
+
+}
+
+#header2 > div {
+  height: 100%;
+  text-align: center;
+  float: left;
+  
+  font-size: 20px;
+}
+
+#header2 :first-child {
+  background-color: rgb(19, 21, 21);
+}
+#header2 :nth-child(2) {
+  background-color: rgb(19, 21, 21);
+}
+#header2 :nth-child(3) {
+  background-color: rgb(19, 21, 21);
+}
+#header2 :nth-child(4) {
+  background-color: rgb(19, 21, 21);
+}
+
+#menu {
+  width: 250px;
+  float: left;
+
+}
+
+#menu > div {
+  background-color: rgb(60, 60, 60);
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  
+  opacity: 50%;
+  color: white;
+}
+
+#menu > :first-child {
+
+  margin-top: 5px;
+  padding: 10px;
+}
+
+#main {
+  margin-top: 5px;
+  background-color: rgba(19, 21, 21, 50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 30px 1fr 1fr 1fr 1fr 1fr;
+  height: 600px;
+  padding-left: 10px;
+}
+
+.text {
+  font-size: 18px;
+  color: aliceblue;
+  text-shadow: goldenrod 0 0 5px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.name_name { /*이름 이름*/
+  
+  grid-column: span 2;
+  width: 100%;
+  background-color: rgba(90, 90, 90, 30%);
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: left;
+}
+
+.item {
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: rgba(90, 90, 90, 30%);
+  
+}
+
+.item_name {
+  position: relative;
+  top: 20px;
+  left: 15px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  
+}
+
+.property1 {
+  color: rgb(108, 189, 108);
+  text-shadow: yellowgreen 0 0 2px;
+  position: relative;
+  top: 50px;
+  left: -50px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.property2 {
+  color: rgb(108, 189, 108);
+  text-shadow: yellowgreen 0 0 2px;
+  position: relative;
+  top: 50px;
+  left: -165px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.property3 {
+  color: rgb(108, 189, 108);
+  text-shadow: yellowgreen 0 0 2px;
+  position: relative;
+  top: 50px;
+  left: -165px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.property4 {
+  color: rgb(108, 189, 108);
+  text-shadow: yellowgreen 0 0 2px;
+  position: relative;
+  top: 50px;
+  left: -116px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.property5 {
+  color: rgb(108, 189, 108);
+  text-shadow: yellowgreen 0 0 2px;
+  position: relative;
+  top: 50px;
+  left: -90px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.property6 {
+  color: rgb(108, 189, 108);
+  text-shadow: yellowgreen 0 0 2px;
+  position: relative;
+  top: 50px;
+  left: -99px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.property7 {
+  color: rgb(108, 189, 108);
+  text-shadow: yellowgreen 0 0 2px;
+  position: relative;
+  top: 50px;
+  left: -178px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.property8 {
+  color: rgb(108, 189, 108);
+  text-shadow: yellowgreen 0 0 2px;
+  position: relative;
+  top: 50px;
+  left: -99px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.sale_btn {
+  height: 40px;
+  width: 140px;
+  position: relative;
+  top: 30px;
+  left:  80px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(26, 26, 100);
+  color: white;
+  border: rgb(21, 68, 64) 1px solid;
+  border-radius: 3px;
+  text-shadow: turquoise 0 0 2px;
+}
+
+.sale_btn1 {
+  height: 40px;
+  width: 140px;
+  position: relative;
+  top: 30px;
+  left:  250px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(26, 26, 100);
+  color: white;
+  border: rgb(21, 68, 64) 1px solid;
+  border-radius: 3px;
+  text-shadow: turquoise 0 0 2px;
+}
+.sale_btn2 {
+  height: 40px;
+  width: 140px;
+  position: relative;
+  top: 30px;
+  left:  123px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(26, 26, 100);
+  color: white;
+  border: rgb(21, 68, 64) 1px solid;
+  border-radius: 3px;
+  text-shadow: turquoise 0 0 2px;
+}
+
+.sale_btn3 {
+  height: 40px;
+  width: 140px;
+  position: relative;
+  top: 30px;
+  left:  135px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(26, 26, 100);
+  color: white;
+  border: rgb(21, 68, 64) 1px solid;
+  border-radius: 3px;
+  text-shadow: turquoise 0 0 2px;
+}
+
+.sale_btn4 {
+  height: 40px;
+  width: 140px;
+  position: relative;
+  top: 30px;
+  left:  185px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(26, 26, 100);
+  color: white;
+  border: rgb(21, 68, 64) 1px solid;
+  border-radius: 3px;
+  text-shadow: turquoise 0 0 2px;
+}
+
+.sale_btn5 {
+  height: 40px;
+  width: 140px;
+  position: relative;
+  top: 30px;
+  left:  170px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(26, 26, 100);
+  color: white;
+  border: rgb(21, 68, 64) 1px solid;
+  border-radius: 3px;
+  text-shadow: turquoise 0 0 2px;
+}
+
+.sale_btn6 {
+  height: 40px;
+  width: 140px;
+  position: relative;
+  top: 30px;
+  left:  120px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(26, 26, 100);
+  color: white;
+  border: rgb(21, 68, 64) 1px solid;
+  border-radius: 3px;
+  text-shadow: turquoise 0 0 2px;
+}
+
+
+img {
+  float: left;
+  padding-top: 8px;
+  padding-left: 10px;
+  height: 80px;
+  width: 80px;
+}
+
+.search_item {
+  padding-top: 7px;
+}
+
+.search_item :first-child {
+  margin-left: 200px;
+  background-color: rgba(90, 90, 90, 30%);
+  width: 300px;
+  height: 28px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 3px;
+  box-shadow: none;
+  border-style: none;
+  background-image: url(../../assets/HTML/하얀색_돋보기.png);
+  background-repeat: no-repeat;
+  background-position: 270px center;
+}
+
+.search_item :nth-child(2) {
+  background-color: rgb(105, 72, 39);
+  border: rgb(149, 98, 46) solid 1px;
+  color: white;
+  height: 28px;
+  width: 140px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
